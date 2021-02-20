@@ -23,7 +23,7 @@ export default async (req, res) => {
     
     await graphcms.request(
         `
-        mutation { createContactForm(data: {name: ${name}, email: ${email}, phone: ${phone}, message: ${message} }) {
+        mutation { createContactForm(data: {name: "${name}", email: "${email}", phone: "${phone}", message: "${message}" }) {
           name
           email
           phone

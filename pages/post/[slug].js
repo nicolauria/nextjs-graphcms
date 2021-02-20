@@ -2,6 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import Link from "next/link";
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT);
+graphcms.setHeader('authorization', `Bearer ${process.env.BEARER_TOKEN}`)
 
 export async function getStaticProps({ params }) {
   const { post } = await graphcms.request(

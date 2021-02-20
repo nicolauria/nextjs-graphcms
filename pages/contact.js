@@ -35,6 +35,7 @@ export default function() {
       setError("")
       setSuccess(data.msg)
     } else {
+      setSuccess("")
       setError(data.msg)
     }
   }
