@@ -27,17 +27,6 @@ export async function getStaticProps() {
   `
   );
 
-  await graphcms.request(
-    `
-    mutation { createContactForm(data: {name: "nico", email: "nico@aol.com", tel: "9166275692" }) {
-      name
-      email
-      tel
-      }
-    }
-    `
-  )
-
   return {
     props: {
       posts,
